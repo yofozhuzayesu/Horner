@@ -28,5 +28,7 @@ int main() {
          std::ostream_iterator<int>(std::cout, " "));
     std::cout << std::endl;
     coefficients.pop_back();
-    horner(std::rbegin(coefficients), std::rend(coefficients), 2);
+    const auto ret =
+        horner(std::rbegin(coefficients), std::rend(coefficients), 2);
+    std::cout << '\n' << ret << std::endl;
 }
